@@ -1,0 +1,59 @@
+@font-face {
+    font-family: chawp;
+    src: url(../vendor/font/chawp.regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    font-family:chawp;
+    background-color: #1f1f1f;
+    color:white;
+}
+.container-teclado{
+/*    border:1px solid white;*/
+    background:#2e2e2e;
+    position: fixed;
+    bottom:0;
+    box-shadow: 0 0 23px #1f1f1f;
+}
+
+.container-teclado button{
+    text-transform:uppercase;
+    margin:12px;
+    min-width:50px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 36px;
+    border-bottom:3px solid transparent;
+    transition:0.3s;
+}
+.container-teclado button:focus,
+.container-teclado button:active,
+.container-teclado button:hover{
+    background-color:transparent;
+    color: white;
+    border-bottom: 3px solid #fff;
+    outline: 0 none;
+}
+
+.container-teclado button.errada{
+    opacity: 0.8;
+    color: red;
+    border-color: red;
+}
+
+.container-teclado button.correta {
+    opacity: 0.8;
+    color: green;
+    border-color: green;
+}
+
+.jogo {
+    display: none;
+}
