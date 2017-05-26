@@ -3,57 +3,117 @@
     src: url(../vendor/font/chawp.regular.ttf);
 }
 
-*{
+* {
     box-sizing: border-box;
     border: 0;
     margin: 0;
 }
 
 body {
-    font-family:chawp;
+    font-family: chawp;
     background-color: #1f1f1f;
-    color:white;
-}
-.container-teclado{
-/*    border:1px solid white;*/
-    background:#2e2e2e;
-    position: fixed;
-    bottom:0;
-    box-shadow: 0 0 23px #1f1f1f;
+    color: #ffffff;
 }
 
-.container-teclado button{
-    text-transform:uppercase;
-    margin:12px;
-    min-width:50px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 36px;
-    border-bottom:3px solid transparent;
-    transition:0.3s;
+div#descricaoJogo {
+    font-size: 1.3em;
+    font-family: Consolas;
 }
-.container-teclado button:focus,
-.container-teclado button:active,
-.container-teclado button:hover{
-    background-color:transparent;
-    color: white;
-    border-bottom: 3px solid #fff;
+
+button#botaoComecar {
+    width: 30%;
+    font-size: 37px;
+    padding: 25px;
+    margin-top: 55px;
+}
+
+#container-teclado {
+    position: fixed;
+    bottom: 0;
+    background: #2e2e2e;
+    box-shadow: 0 0 23px #1f1f1f;
+    -o-box-shadow: 0 0 23px #1f1f1f;
+    -moz-box-shadow: 0 0 23px #1f1f1f;
+    -webkit-box-shadow: 0 0 23px #1f1f1f;
+}
+
+#container-teclado button {
+    min-width: 50px;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 12px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s all linear;
+    -o-transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+    -moz-transition: 0.3s all linear;
+}
+
+#container-teclado button:focus,
+#container-teclado button:active,
+#container-teclado button:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff;
     outline: 0 none;
 }
 
-.container-teclado button.errada{
+#container-teclado button.errada {
     opacity: 0.8;
-    color: red;
-    border-color: red;
+    color: #ff0000;
+    border-color: #ff0000;
 }
 
-.container-teclado button.correta {
+#container-teclado button.correta {
     opacity: 0.8;
-    color: green;
-    border-color: green;
+    color: #008000;
+    border-color: #008000;
 }
 
 .jogo {
     display: none;
+}
+
+div#palavra {
+    font-size: 40px;
+    letter-spacing: 15px;
+}
+
+div#forca {
+    min-width: 16.6%;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+div#forca.estagio-1 {
+    background-image: url('../img/forca1.png');
+}
+
+div#forca.estagio-2 {
+    background-image: url('../img/forca2.png');
+}
+
+div#forca.estagio-3 {
+    background-image: url('../img/forca3.png');
+}
+
+div#forca.estagio-4 {
+    background-image: url('../img/forca4.png');
+}
+
+div#forca.estagio-5 {
+    background-image: url('../img/forca5.png');
+}
+
+div#forca.estagio-6 {
+    background-image: url('../img/forca6.png');
+}
+
+div#forca.estagio-7 {
+    background-image: url('../img/forca7.png');
 }

@@ -11,22 +11,35 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-
                     <div class="row" id="descricaoJogo">
                         <h1 class="page-header">Jogo da Forca</h1>
-                        <p>O jogo da forca é um jogo em que o jogador tem que acertar qual é a palavra proposta, tendo como dica o número de letras e o tema ligado à palavra. A cada letra errada, é desenhada uma parte do corpo do enforcado. O jogo termina ou com o acerto da palavra ou com o término do preenchimento das partes corpóreas do enforcado.</p>
-                        <p>Nesta variação, há ainda um temporizador de 10 segundos para informar uma letra, a partir da primeira. Caso não informada a tempo, uma parte do corpo é desenhada.</p>
-                        <button id="botaoComecar" class="btn btn-default">Começar</button>
+                        
+                        Objetivo:
+                        <ul>
+                            <li>Acertar a palavra escondida selecionando uma letra por vez.</li>
+                        </ul>
+                        
+                        Regras:
+                        <ul>
+                            <li>É permitido errar 5 letras, ao errar a sexta vez, o jogo termina.</li>
+                            <li>O jogador deve selecionar cada letra em menos de 10 segundos. Caso contrário será contabilizado um erro.</li>
+                            <li>A primeira letra de cada palavra não terá limite de tempo.</li>
+                        </ul>
+                        
+                        <div class="text-center">
+                            <button id="botaoComecar" class="btn btn-success">Começar</button>
+                        </div>
                     </div>
 
                     <div id="jogo" class="jogo">
-                        <div class="col-lg-2">
-                        </div>
-                        <div class="col-lg-10">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 estagio-1" id="forca"></div>
+                        
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                             <div class="row"> 
                                 <div class="col-lg-12">
                                     <div id="palavra" class="text-center"></div>
-                                    <div id="dica"></div>
+                                    <div id="dica" class="text-center"></div>
+                                    <div id="timer" class="text-center"></div>
                                 </div>
                             </div>
                         </div>
@@ -34,12 +47,12 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="container-fluid jogo">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row text-center">
-                        <div class="col-lg-12 container-teclado">
+                        <div class="col-lg-12" id="container-teclado">
                             <div class="row">
                                 <button class="btn btn-default">q</button>
                                 <button class="btn btn-default">w</button>
@@ -81,6 +94,8 @@
         <!-- SCRIPTS -->
         <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/palavra.class.js"></script>
+        <script type="text/javascript" src="js/timer.class.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>
